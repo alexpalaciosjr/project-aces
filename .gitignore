@@ -15,3 +15,93 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
+
+.generated.sln
+
+# Build Folders (you can keep bin if you'd like to check in binaries)
+bin/
+obj/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+.scaffolding/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+
+# Rider directories
+.idea/
+*.sln.iml
+
+# Local History for Visual Studio
+.vs/
+
+# DotNet user secrets
+secrets.json
+
+# NCrunch
+.ncrunchsolution
+
+# WebAssembly
+wwwroot/
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# User-specific files (Mono Auto Generated Files)
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+
+# Rider directories
+.idea/
+*.sln.iml
+
+# Local History for Visual Studio
+.vs/
+
+# DotNet user secrets
+secrets.json
+
+# NCrunch
+.ncrunchsolution
+
+# WebAssembly
+wwwroot/

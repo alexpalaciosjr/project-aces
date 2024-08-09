@@ -2,13 +2,14 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using static webserver.Constants;
+using webserver.Models;
+using Microsoft.AspNetCore.WebUtilities;
 
 public class ExternalApiService
 {
     private readonly HttpClient _httpClient;
 
-    private readonly string BaseUrl = "localhost:5000"
+    private readonly string BaseUrl = "localhost:5000";
 
     public ExternalApiService(HttpClient httpClient)
     {
@@ -17,13 +18,8 @@ public class ExternalApiService
 
     public async Task<string> GetFieldsAsync(Dictionary<string, string> queryParams)
     {
-        var query = HttpUtility.ParseQueryString(string.Empty);
-        foreach (var param in queryParams)
-        {
-            query[param.Key] = param.Value;
-        }
-        var queryString = query.ToString();
-        var response = await _httpClient.GetAsync($"{BaseUrl}/fields?{queryString}");
+        var url = QueryHelpers.AddQueryString($"{BaseUrl}/fields", queryParams);
+        var response = await _httpClient.GetAsync(url);
         response.EnsureSuccessStatusCode();
         return await response.Content.ReadAsStringAsync();
     }
